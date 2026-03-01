@@ -171,5 +171,4 @@ def get_token_info():
 
 
 if __name__ == "__main__":
-    print("Server starting on http://0.0.0.0:8080")
-    app.run(host="0.0.0.0", port=8080, threaded=True)
+    app.run(host="0.0.0.0", port=8080)
