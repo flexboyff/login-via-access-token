@@ -122,7 +122,7 @@ def live_version():
                 updated_parts = []
                 for url in parts:
                     if "ffmconnect.live.gop.garenanow.com" in url:
-                        updated_parts.append("http://127.0.0.1:8080")
+                        updated_parts.append("https://version-common-redflamenco.vercel.app")
                     else:
                         updated_parts.append(url)
 
