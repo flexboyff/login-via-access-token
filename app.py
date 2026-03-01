@@ -115,11 +115,9 @@ def live_version():
             gop_url = json_data.get("gop_url")
 
             if gop_url:
-                print("Original GOP URL:", gop_url)
-
                 parts = gop_url.split(";")
-
                 updated_parts = []
+
                 for url in parts:
                     if "ffmconnect.live.gop.garenanow.com" in url:
                         updated_parts.append("https://version-common-redflamenco.vercel.app")
@@ -127,8 +125,10 @@ def live_version():
                         updated_parts.append(url)
 
                 json_data["gop_url"] = ";".join(updated_parts)
+            else:
+                json_data["gop_url"] = "https://version-common-redflamenco.vercel.app"
 
-                return jsonify(json_data)
+            return jsonify(json_data)
 
         except Exception:
             pass
